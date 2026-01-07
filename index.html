@@ -13,23 +13,21 @@
       }
 
       body {
-        font-family: "Arial", sans-serif;
-        height: 100vh;
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
         background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
         color: #222;
       }
 
-      /* MAIN CONTAINER */
       .main {
         display: flex;
-        height: 100vh;
+        min-height: 100vh;
         padding: 40px 6%;
         gap: 40px;
         align-items: center;
         justify-content: space-between;
       }
 
-      /* LEFT SIDE CONTENT */
       .left {
         flex: 2;
         display: flex;
@@ -51,7 +49,6 @@
         font-style: italic;
       }
 
-      /* SECTIONS */
       .section {
         margin-top: 20px;
         background: #fff;
@@ -75,10 +72,16 @@
         margin-bottom: 10px;
       }
 
+      .section h3 {
+        font-size: 15px;
+        margin-top: 10px;
+        color: #222;
+      }
+
       .section p,
-      li {
+      .section li {
         font-size: 14px;
-        margin: 5px 0;
+        margin: 6px 0;
         color: #444;
       }
 
@@ -86,7 +89,6 @@
         padding-left: 18px;
       }
 
-      /* BUTTONS */
       .buttons {
         margin-top: 18px;
       }
@@ -110,7 +112,6 @@
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
       }
 
-      /* RIGHT PHOTO */
       .right {
         flex: 1;
         display: flex;
@@ -121,19 +122,12 @@
       .right img {
         width: 260px;
         height: 320px;
-        border-radius: 50% 50% 40% 40%; /* capsule/oval shape */
+        border-radius: 50% 50% 40% 40%;
         object-fit: cover;
         border: 4px solid #888;
         box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
       }
 
-      .right img:hover {
-        transform: rotate(0deg) scale(1.05);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-      }
-
-      /* FOOTER / CONTACT */
       .footer {
         font-size: 13px;
         margin-top: 15px;
@@ -150,16 +144,11 @@
         text-decoration: underline;
       }
 
-      /* MOBILE */
       @media (max-width: 768px) {
         .main {
           flex-direction: column-reverse;
           padding: 20px;
           height: auto;
-        }
-
-        .right {
-          margin-bottom: 20px;
         }
 
         .right img {
@@ -176,7 +165,6 @@
 
   <body>
     <div class="main">
-      <!-- LEFT CONTENT -->
       <div class="left">
         <div>
           <h1>Yashvi Patel</h1>
@@ -195,13 +183,8 @@
             <h2>Skills</h2>
             <ul>
               <li><b>Languages:</b> C, Verilog</li>
-              <li>
-                <b>Tools:</b> VS Code, Arduino IDE, Atmel Studio, Vivado,
-                Proteus
-              </li>
-              <li>
-                <b>Concepts:</b> Digital Electronics, Protocols, RTOS basics
-              </li>
+              <li><b>Tools:</b> VS Code, Arduino IDE, Atmel Studio, Vivado, Proteus</li>
+              <li><b>Concepts:</b> Digital Electronics, Communication Protocols, RTOS basics</li>
               <li><b>OS:</b> Windows, Linux (basic CLI)</li>
             </ul>
           </div>
@@ -210,67 +193,54 @@
             <h2>Projects</h2>
             <ul>
               <li>
-               <h3>Solar Tracking System</h3>
-        <p>
-          <b>Role:</b>Idea Development, Writing Code, Integrating Hardware
-          Problem
-        </p>
-        <p><b>Tools used:</b> Arduino IDE, Proteus</p>
-        <p>
-          <b>Outcome:</b> The project built a solar tracking system using
-          Arduino Uno that moves the solar panel to follow the sun during the
-          day. It uses light sensors to find the sun and servo motors to turn
-          the panel. This helps the panel get more sunlight and produce more
-          energy than a fixed panel.
-        </p>
-        <p><b>Technologies:</b> Arduino IDE, Proteus</p>
-      </div>
+                <h3>Solar Tracking System</h3>
+                <p><b>Role:</b> Idea development, embedded coding, hardware integration</p>
+                <p><b>Tools:</b> Arduino IDE, Proteus</p>
+                <p>
+                  <b>Outcome:</b> Designed a solar tracking system using LDR sensors
+                  and servo motors to increase energy efficiency compared to fixed panels.
+                </p>
+                <p><b>Technologies:</b> Arduino, Proteus</p>
               </li>
-              <li><h3>Temperature Monitoring System</h3>
-        <p>
-          <b>Role:</b> Writing Code, Worked in a team to assemble and integrate
-          hardware components
-        </p>
-        <p>
-          <b>Tools Used:</b> ATmega32 microcontroller, LM35 temperature sensor,
-          16x2 LCD, Embedded C (AVR-GCC), AVR Studio/Proteus for simulation,
-          hardware prototyping kit.
-        </p>
-        <p>
-          <b>Outcome:</b> Successfully designed a working prototype that
-          accurately sensed and displayed temperature, provided threshold-based
-          alerts, and demonstrated proficiency in microcontroller programming
-          and hardware interfacing.
-        </p>
-        <p><b>Technologies:</b> LM35, Arduino, LCD</p>
+
+              <li>
+                <h3>Temperature Monitoring System</h3>
+                <p><b>Role:</b> Embedded C programming and hardware interfacing</p>
+                <p>
+                  <b>Tools:</b> ATmega32, LM35, 16x2 LCD, AVR-GCC, Proteus
+                </p>
+                <p>
+                  <b>Outcome:</b> Real-time temperature display with threshold-based
+                  alerts demonstrating microcontroller programming skills.
+                </p>
+                <p><b>Technologies:</b> LM35, AVR, LCD</p>
+              </li>
             </ul>
           </div>
 
           <div class="buttons">
-            <a href="YASHVI PATEL.pdf" download class="btn">Resume</a>
-            <a
-              href="https://github.com/yashvipatel07"
-              target="_blank"
-              class="btn"
-              >GitHub</a
-            >
+            <a href="resume.pdf" download class="btn">Resume</a>
+            <a href="https://github.com/yashvipatel07" target="_blank" class="btn">GitHub</a>
           </div>
         </div>
 
         <div class="footer">
-          📧
-          <a href="mailto:yashvirpatel07@gmail.com">yashvirpatel07@gmail.com</a>
+          📧 <a href="mailto:yashvirpatel07@gmail.com">yashvirpatel07@gmail.com</a>
           | 🔗
-          <a href="https://www.linkedin.com/in/yashvi-patel1234" target="_blank"
-            >LinkedIn</a
-          >
+          <a href="https://www.linkedin.com/in/yashvi-patel1234" target="_blank">
+            LinkedIn
+          </a>
         </div>
       </div>
 
-      <!-- RIGHT PHOTO -->
       <div class="right">
-        <img src="yashvi photo.jpeg" alt="Profile Photo" />
+        <img src="profile.jpg" alt="Profile Photo" />
       </div>
     </div>
   </body>
 </html>
+
+
+             
+              
+  
